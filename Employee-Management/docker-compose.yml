@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      target: development
+    container_name: employee_web
+    restart: unless-stopped
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    networks:
+      - employee_network
+
+volumes:
+  static_volume:
+  media_volume:
+
+networks:
+  employee_network:
+    driver: bridge
