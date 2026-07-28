@@ -162,3 +162,47 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Project secrets and local configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+credentials-*.json
+service-account*.json
+token.json
+secrets.yaml
+secrets.yml
+*-secrets.yaml
+*-secrets.yml
+
+# Local databases and Django runtime data
+*.sqlite3
+*.sqlite3-*
+*.db
+media/
+staticfiles/
+logs/
+
+# JavaScript / Vite frontend dependencies and build artifacts
+node_modules/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
