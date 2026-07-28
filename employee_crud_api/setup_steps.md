@@ -5,7 +5,7 @@ This repository contains the project in `employee_crud_api`.
 ## 1. Open a terminal in the repository root
 
 ```powershell
-cd "D:\Zeddd IDE\IAC"
+cd "D:\Zeddd IDE\Python"
 ```
 
 ## 2. Move into the project directory
