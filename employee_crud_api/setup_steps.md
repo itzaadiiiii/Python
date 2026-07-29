@@ -27,6 +27,14 @@ If PowerShell blocks activation, run this once in the current terminal and retry
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
+## Or
+
+# If using Gitbash
+
+```gitbash
+source .venv/Scripts/activate
+```
+
 ## 4. Install dependencies
 
 ```powershell
