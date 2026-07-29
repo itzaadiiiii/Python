@@ -29,7 +29,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 ## Or
 
-# If using Gitbash
+### If using Gitbash
 
 ```gitbash
 source .venv/Scripts/activate
