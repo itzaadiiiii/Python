@@ -1,24 +1,42 @@
 # Python Backend Testing (flask_rds_user_api)
+
 ![Project Image](https://raw.githubusercontent.com/arumullayaswanth/Python-backend-testing/6dba8e011d7e5910079c56a772b9bffee2aac93c/flackare.jpg)
 
-- update
+# Prerequisites
+
+- Create a RDS instance and Get the endpoint
+- Create a EC2 instance wiht t3.micro and install below packages
+- Set up an application.
+
+---
+
+- **update the system**
+
 ```bash
 sudo dnf update -y
 ```
+
 - Install MySQL client
+
 ```bash
 sudo dnf install mariadb105 -y
 mysql --version
 ```
+
 - Connect to RDS
+
 ```bash
 mysql -h <your-rds-endpoint> -u <username> -p
 ```
+
 example:
+
 ```bash
 mysql -h mydb.xxxxxx.ap-south-1.rds.amazonaws.com -u admin -p
 ```
+
 - Run the following SQL commands:
+
 ```bash
 CREATE DATABASE dev;
 USE dev;
@@ -31,6 +49,7 @@ CREATE TABLE users (
 
 SELECT * FROM dev.users;
 ```
+
 #### Deploy Flask Backend on EC2
 
 ```bash
@@ -42,7 +61,7 @@ cd Python-backend-testing
 python3 flask_rds_user_api.py
 ```
 
-### To run Flask in background:
+### To run Flask in background
 
 nohup allows your app to continue running even after terminal disconnect:
 
@@ -80,13 +99,13 @@ sudo -i
 
 ## ✅ Step 8: API Methods and Testing
 
-### Flask API Supports:
+### Flask API Supports
 
-* `GET /users` → Fetch all users
-* `GET /users/<id>` → Fetch single user by ID
-* `POST /users/add` → Add a new user
-* `PUT /users/update/<id>` → Update user
-* `DELETE /users/delete/<id>` → Delete user
+- `GET /users` → Fetch all users
+- `GET /users/<id>` → Fetch single user by ID
+- `POST /users/add` → Add a new user
+- `PUT /users/update/<id>` → Update user
+- `DELETE /users/delete/<id>` → Delete user
 
 ### Example `curl` Commands:  Run this commands in EC2  backend server
 
